@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins";
+  font-size: 22px;
+}
+.full-container {
+  display: flex;
+  flex-direction: row;
+
+  height: 100vh;
+  position: relative;
+}
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0.1px 0.5px 1px 0px #888888;
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: fixed;
+}
+.sidebar_header {
+  padding-top: 8%;
+  padding-left: 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sidebar_header hr {
+  margin-right: 3%;
+}
+.sidebar_header a {
+  text-decoration: none;
+  color: rgb(55, 54, 54);
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+.logo {
+  height: 3vh;
+  width: 5%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-right: 5%;
+  padding-left: 5%;
+  background-color: #0064af;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.company_name {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.company_name p {
+  font-weight: 300;
+  font-size: small;
+}
+.sidebar_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar_body hr {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.sidebar_body a {
+  color: inherit;
+  text-decoration: none;
+}
+.sidebar_nav {
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 18px;
+  cursor: pointer;
+  color: #0064af;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+.sidebar_nav:hover {
+  background-color: #d7dee385;
+  color: #888888;
+}
+.sidebar_nav i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.sidebar_body p {
+  font-size: large;
+}
+.right-body {
+  padding-left: 22%;
+  padding-top: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+.navbar a {
+  margin-right: 2%;
+  border-radius: 100%;
+}
+.navbar a img {
+  border-radius: 100%;
+}
+.card_list {
+  display: flex;
+  padding: 10%;
+  flex-wrap: wrap;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+.card_list a {
+  text-decoration: none;
+  color: inherit;
+}
+.landing_card {
+  display: flex;
+  position: relative;
+  border: 1px solid #0064af;
+  padding: 3%;
+  border-radius: 20px;
+  box-shadow: 0.1px 0.5px 1px 0px #888888;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.landing_card:hover {
+  box-shadow: 0px 4px 8px 0px #888888;
+}
+
+.landing_icon {
+  position: absolute;
+  border: 1px solid #0064af;
+  transform: translateY(-115%);
+  left: 40%;
+  width: 35px;
+  height: 35px;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #0064af;
+}
+.absolute_view_cards {
+  display: none;
+  position: absolute;
+  transform: translateY(-120%);
+  left: 67%;
+  flex-direction: column;
+  gap: 1rem;
+  width: 7%;
+  cursor: pointer;
+}
+
+.view_cards {
+  box-shadow: 0.1px 0.5px 1px 0px #888888;
+  border-top: 0px solid #888888;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+}
+.view_cards p {
+  font-size: medium;
+}
+h2 {
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+.view_user_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.view_user_btn_div {
+  width: 5%;
+  background-color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+.view_user_header button {
+  outline: none;
+  background-color: inherit;
+  border: none;
+  color: #2f98e8;
+  font-weight: 600;
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 100%;
+  cursor: pointer;
+}
+.view_user_btn_div:hover {
+  transform: scale(1.05);
+}
+.modal {
+  position: absolute;
+  width: 50%;
+  height: 50vh;
+  background-color: white;
+  left: 25%;
+  transform: translateY(50%);
+  box-shadow: 0.1px 0.5px 1px 0px #888888;
+  border-radius: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.modal_header button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.modal_body {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.login-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.login-input label {
+  margin-top: 1%;
+  font-size: medium;
+  font-weight: 700;
+}
+.input-style {
+  background-color: white;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.input-style input {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  width: 100%;
+}
+.input-style select {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  width: 100%;
+}
+.modal_footer {
+  display: flex;
+  justify-content: end;
+}
+.modal_button {
+  display: flex;
+  justify-content: end;
+  padding-right: 3%;
+  padding-bottom: 2%;
+  width: 25%;
+}
+.modal_button button {
+  background-color: #0064af;
+  color: white;
+  outline: none;
+  padding-top: 1.2%;
+  padding-left: 5%;
+  padding-right: 3%;
+  padding-bottom: 1.2%;
+  border: none;
+  font-size: large;
+}
+.dropdown {
+  position: absolute;
+  background-color: white;
+  width: 15%;
+  box-shadow: 0.1px 0.5px 1px 0px #888888;
+  border-radius: 10px;
+  left: 82%;
+  transform: translateY(70%);
+  padding: 1%;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown a {
+  font-size: medium;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.dropdown a:hover {
+  background-color: #2f98e8;
+  color: white;
+}
+.dropdown_button {
+  display: flex;
+  justify-content: center;
+  padding-right: 3%;
+  padding-bottom: 2%;
+  width: 100%;
+  cursor: pointer;
+}
+.dropdown_button:hover {
+  background-color: #2f98e8;
+}
+.dropdown_button button {
+  background-color: transparent;
+  color: black;
+  outline: none;
+  padding-top: 1.2%;
+  padding-left: 5%;
+  padding-right: 3%;
+  padding-bottom: 1.2%;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}
+.dropdown_button button:hover {
+  color: white;
+}
+.profile_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 85vh;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80%;
+  margin-left: auto;
+  box-shadow: 1px 1px 1px 1px #888888;
+  margin-right: auto;
+  padding: 3%;
+}
+.profile_header {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.profile_img {
+  width: 100px; /* Set your desired width */
+  height: 100px; /* Set your desired height */
+  overflow: hidden;
+  border-radius: 50%; /* Make it a perfect circle */
+}
+
+.profile_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+.upload_photo {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.user-info-container {
+  width: 95%;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.user-info-container p {
+  font-size: large;
+}
+
+.user-info {
+  margin-bottom: 10px;
+}
+.edit_profile {
+  display: flex;
+  justify-content: end;
+}
+.upload_profile_button {
+  display: flex;
+  justify-content: center;
+}
+.password-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.password-input {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+.password-input label {
+  font-size: large;
+}
+.login-input_ {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.input-style_ {
+  border: 1px solid #000;
+  width: 50%;
+  border-radius: 5px;
+}
+.input-style_ input
+{
+  width: 98%;
+  padding: 1%;
+  outline: none;
+  border: none;
+}
+.input-style_ select {
+  width: 95%;
+  padding: 1%;
+  outline: none;
+  border: none;
+}
+.add_container {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login-btn-div_ {
+  display: flex;
+  justify-content: center;
+}
